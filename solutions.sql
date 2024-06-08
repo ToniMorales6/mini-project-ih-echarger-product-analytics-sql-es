@@ -96,9 +96,9 @@ WITH average_per_id_per_month as (
 	FROM sessions s
 	GROUP BY charger_id, `month`
     )
-SELECT `month`,AVG(user_count) AS average_users_per_charger_per_month
+SELECT charger_id,`month`,AVG(user_count) AS average_users_per_charger_per_month
 FROM average_per_id_per_month
-GROUP BY `month`;
+GROUP BY charger_id,`month`;
 
 -- Question 12: Top 3 users per charger (for each charger, number of sessions)
 
