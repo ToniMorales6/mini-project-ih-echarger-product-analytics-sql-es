@@ -7,7 +7,7 @@ FROM sessions;
 
 -- Question 2: Number of chargers used by user with id 1
 
-SELECT COUNT(distinct charger_id) AS total_chargers_used
+SELECT COUNT(DISTINCT charger_id) AS total_chargers_used
 FROM sessions s
 WHERE s.user_id = 1;
 
